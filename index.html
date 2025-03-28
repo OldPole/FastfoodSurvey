@@ -12,31 +12,13 @@
         <h2>Оставьте отзыв и получите подарок!</h2>
 
         <div class="survey" id="survey">
-            <div class="survey-questions" id="questions">
-                <div class="survey-questions-item">
-                    <div class="survey-questions-item__question">Вопрос 1</div>
-                    <ul class="survey-questions-item__answers">
-                        <li>
-                            <label>
-                                <input class="answer-input" type="radio">
-                                Ответ 1
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input class="answer-input" type="radio">
-                                Ответ 2
-                            </label>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <div class="survey-questions" id="questions"></div>
 
-            <div class="survey-contacts"></div>
+            <div class="survey-contacts" id="contacts"></div>
 
             <div class="survey-controls">
-                <button class="btn-next">Далее</button>
-                <button class="btn-send">Отправить</button>
+                <button class="btn-next" id="btn-next" disabled>Далее</button>
+                <button class="btn-send" id="btn-send">Отправить</button>
             </div>
 
             <div class="survey-indicator" id="indicator">
