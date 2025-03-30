@@ -41,6 +41,10 @@ h1 {
   border-radius: 20px;
 }
 
+.survey-questions {
+  display: none;
+}
+
 .survey-questions-item {
   margin-bottom: 20px;
 }
@@ -95,6 +99,63 @@ h1 {
 }
 .custom-checkbox-answer input:checked + img {
   border-color: orange;
+}
+
+.survey-info-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.survey-info-title h3 {
+  margin: 10px 0 0 0;
+}
+.survey-info-title img {
+  height: 20px;
+  width: 20px;
+}
+
+.survey-info-client {
+  display: flex;
+}
+.survey-info-client .survey-info-client-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
+}
+.survey-info-client .survey-info-client-contacts p {
+  font-size: 16px;
+  font-weight: 600;
+}
+.survey-info-client .survey-info-client-gifts {
+  width: 280px;
+}
+.survey-info-client .survey-info-client-gifts__gift {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.survey-info-client .survey-info-client-gifts__gift img {
+  width: 20px;
+  height: 20px;
+}
+.survey-info-client .survey-info-client-gifts__gift p {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.custom-input {
+  box-sizing: border-box;
+  padding: 8px;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 30px;
+  border: none;
+  border-bottom: 1px black solid;
+  outline: none;
+  color: #333;
 }
 
 .survey-controls {

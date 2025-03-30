@@ -65,17 +65,17 @@ const data = [
         question: 'Что бы вы хотели добавить в меню',
         answers: [
             {   
-                img: '/images/burger1.jpg',
+                img: '/images/questionImages/burger1.jpg',
                 alt: 'burger1',
                 value: 'Новый бургер с говядиной',
             },
             {   
-                img: '/images/burger2.jpeg',
+                img: '/images/questionImages/burger2.jpeg',
                 alt: 'burger2',
                 value: 'Новый бургер с курицей',
             },
             {
-                img: '/images/drink.jpg',
+                img: '/images/questionImages/drink.jpg',
                 alt: 'drink',
                 value: 'Новый фирменный напиток',
             },

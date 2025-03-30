@@ -44,6 +44,10 @@ h1 {
     border-radius: 20px;
 }
 
+.survey-questions {
+    display: none;
+}
+
 .survey-questions-item {
     margin-bottom: 20px;
 
@@ -104,6 +108,74 @@ h1 {
     }
 
 }
+
+.survey-info-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+
+    h3 {
+        margin: 10px 0 0 0;
+    }
+
+    img {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.survey-info-client {
+    display: flex;
+
+ .survey-info-client-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 280px;
+
+    p {
+        font-size: 16px;
+        font-weight: 600;
+    }
+ }
+
+ .survey-info-client-gifts {
+    width: 280px;
+
+    &__gift {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+
+        p {
+            margin-left: 10px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+ }
+}
+
+.custom-input {
+    box-sizing: border-box;
+
+    padding: 8px;
+    margin-bottom: 20px;
+
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px black solid;
+    outline: none;
+    color: #333;
+}
+
 
 .survey-controls {
     display: flex;
