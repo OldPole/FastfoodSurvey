@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="scss/style.css">
     <title>FastfoodSurvey</title>
+    <link rel="icon" type="image/png" href="">
+    <link rel="stylesheet" href="scss/style.css">
 </head>
 <body>
     <div class="container">
@@ -14,46 +15,11 @@
         <div class="survey" id="survey">
             <div class="survey-questions" id="questions"></div>
 
-            <div class="survey-info" id="contacts">
-                <div class="survey-info-title">
-                    <img src="/images/icons/checkmark.png" alt="checkmark">
-                    <h3>Отлично! Последний шаг!</h3>
-                </div>
-
-                <div class="survey-info-client">
-                    <div class="survey-info-client-contacts">
-                        <p>Укажите контакты</p>
-                        <form class="survey-info-client-contacts-form">
-                            <div class="contacts-form-input">
-                                <label for="name"></label>
-                                <input type="text" class="custom-input" placeholder="Ваше имя">
-                            </div>
-
-                            <div class="contacts-form-input">
-                                <label for="phone"></label>
-                                <input type="tel" class="custom-input" placeholder="Ваш телефон">
-                            </div>
-                        </form>
-                        <p></p>
-                    </div>
-
-                    <div class="survey-info-client-gifts">
-                        <div class="survey-info-client-gifts__gift">
-                            <img src="/images/icons/gift.png" alt="gift">
-                            <p>Зарегестрируйтесь в нашем приложении и ежедневно получайте выгодные купоны</p>
-                        </div>
-
-                        <div class="survey-info-client-gifts__gift">
-                            <img src="/images/icons/gift.png" alt="gift">
-                            <p>Получите в подарок скидку в 50% на пирожок</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="survey-contacts" id="contacts"></div>
 
             <div class="survey-controls">
                 <button class="btn-next" id="btn-next" disabled>Далее</button>
-                <button class="btn-send" id="btn-send">Отправить</button>
+                <button class="btn-send" id="btn-send" disabled>Отправить</button>
             </div>
 
             <div class="survey-indicator">

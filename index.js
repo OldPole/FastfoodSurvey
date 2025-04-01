@@ -139,11 +139,55 @@ const renderUniqueQuestion = (index) => {
 }
 
 const renderContacts = () => {
+    contacts.innerHTML = `
+    <div class="survey-contacts-title">
+        <img src="/images/icons/checkmark.png" alt="checkmark">
+        <h3>Отлично! Последний шаг!</h3>
+    </div>
 
-}
+    <div class="survey-contacts-info">
+        <div class="survey-contacts-info-inputs">
+            <p>Укажите контакты</p>
+            <form>
+                <div>
+                    <label for="name"></label>
+                    <input type="text" class="custom-input-name" placeholder="Ваше имя">
+                </div>
 
-const renderIndicator = () => {
+                <div>
+                    <label for="phone"></label>
+                    <input type="tel" class="custom-input-tel" placeholder="Ваш телефон">
+                </div>
+            </form>
+        </div>
 
+        <div class="survey-contacts-info-gifts">
+            <div class="survey-contacts-info-gifts__gift">
+                <img src="/images/icons/gift.png" alt="gift">
+                <p>Зарегестрируйтесь в нашем приложении и ежедневно получайте выгодные купоны</p>
+            </div>
+
+            <div class="survey-contacts-info-gifts__gift">
+                <img src="/images/icons/gift.png" alt="gift">
+                <p>Получите в подарок скидку в 50% на пирожок</p>
+            </div>
+        </div>
+    </div>
+    `
+    const inputName = document.querySelector('.custom-input-name');
+    const inputTel = document.querySelector('.custom-input-tel');
+
+    inputName.addEventListener('input', (event) => {
+        localResults[event.target.name] = event.target.value;
+        console.log(localResults);
+        btnSend.disabled = !(inputName.value.trim() && inputTel.value.trim());
+    });
+
+    inputTel.addEventListener('input', (event) => {
+        localResults[event.target.name] = event.target.value;
+        console.log(localResults);
+        btnSend.disabled = !(inputName.value.trim() && inputTel.value.trim());
+    });
 }
 
 survey.addEventListener('change', (event) => {
@@ -159,6 +203,11 @@ survey.addEventListener('click', (event) => {
         const nextQuestionIndex = Number(questions.dataset.currentstep) + 1;
 
         if(nextQuestionIndex === data.length) {
+            questions.classList.add('questions--hidden');
+            contacts.classList.add('contacts--visible');
+            btnNext.classList.add('btn-next--hidden');
+            btnSend.classList.add('btn-send--visible');
+
             renderContacts();
         } else if (nextQuestionIndex === 4) {
             renderUniqueQuestion(nextQuestionIndex);
@@ -166,7 +215,7 @@ survey.addEventListener('click', (event) => {
             renderQuestions(nextQuestionIndex);
         }
 
-        currentProgress += 16;
+        currentProgress += 80 / data.length;
         progressBar.style.width = currentProgress + '%';
 
         btnNext.disabled = true;

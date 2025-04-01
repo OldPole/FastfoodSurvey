@@ -41,10 +41,6 @@ h1 {
   border-radius: 20px;
 }
 
-.survey-questions {
-  display: none;
-}
-
 .survey-questions-item {
   margin-bottom: 20px;
 }
@@ -101,52 +97,55 @@ h1 {
   border-color: orange;
 }
 
-.survey-info-title {
+.survey-contacts-title {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
 }
-.survey-info-title h3 {
+.survey-contacts-title h3 {
   margin: 10px 0 0 0;
 }
-.survey-info-title img {
+.survey-contacts-title img {
   height: 20px;
   width: 20px;
 }
 
-.survey-info-client {
+.survey-contacts-info {
   display: flex;
 }
-.survey-info-client .survey-info-client-contacts {
+
+.survey-contacts-info-inputs {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 280px;
 }
-.survey-info-client .survey-info-client-contacts p {
+.survey-contacts-info-inputs p {
   font-size: 16px;
   font-weight: 600;
 }
-.survey-info-client .survey-info-client-gifts {
+
+.survey-contacts-info-gifts {
   width: 280px;
 }
-.survey-info-client .survey-info-client-gifts__gift {
+.survey-contacts-info-gifts__gift {
   display: flex;
   align-items: center;
   margin-top: 10px;
 }
-.survey-info-client .survey-info-client-gifts__gift img {
+.survey-contacts-info-gifts__gift img {
   width: 20px;
   height: 20px;
 }
-.survey-info-client .survey-info-client-gifts__gift p {
+.survey-contacts-info-gifts__gift p {
   margin-left: 10px;
   font-size: 14px;
   font-weight: 600;
 }
 
-.custom-input {
+.custom-input-name,
+.custom-input-tel {
   box-sizing: border-box;
   padding: 8px;
   margin-bottom: 20px;
@@ -168,7 +167,8 @@ h1 {
   padding: 20px 0;
 }
 
-.btn-next {
+.btn-next,
+.btn-send {
   font-size: 16px;
   padding: 5px 30px;
   border-radius: 20px;
@@ -178,7 +178,8 @@ h1 {
   transition: opacity 0.2s;
 }
 
-.btn-next:hover {
+.btn-next:hover,
+.btn-send:hover {
   opacity: 0.8;
 }
 
@@ -203,4 +204,14 @@ h1 {
   border-bottom-right-radius: 20px;
   width: 20%;
   transition: width 0.5s ease;
+}
+
+.questions--hidden,
+.btn-next--hidden {
+  display: none;
+}
+
+.contacts--visible,
+.btn-send--visible {
+  display: block;
 }/*# sourceMappingURL=style.css.map */
